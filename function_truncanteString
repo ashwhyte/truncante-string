@@ -1,0 +1,35 @@
+function truncateString(str, num) {
+  
+  strArray = str.split("");
+  strLength = str.length;
+  
+  if (num < str.length && num > 4) {
+  for (var i = num - 3; i < strLength; i++) {
+    
+    strArray[i] = "";
+    
+  }
+    
+  newStr = strArray.join("");
+  newStr += "...";
+  
+  }else if (num < str.length) {
+    
+    for (var j = num; j < strLength; j++) {
+    
+    strArray[j] = "";
+    
+  }
+    
+  newStr = strArray.join("");
+  newStr += "...";
+  
+    
+  }else {
+    newStr = str;
+  }
+
+  
+  
+  return newStr;
+}
